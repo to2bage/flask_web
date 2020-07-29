@@ -8,6 +8,6 @@ Version: 0.1
 """
 SECRET_KEY = "WRaerecpl,;E5454$#@!(*&"
 
-SQLALCHEMY_DATABASE_URI = "mysql+cymysql://root:zymic021635@221.229.216.53:3306/ginger"
+SQLALCHEMY_DATABASE_URI = "mysql+cymysql://root:zymic021635@221.229.216.53:3306/flask_web"
 
 SQLALCHEMY_TRACK_MODIFICATIONS = True

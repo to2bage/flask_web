@@ -17,9 +17,7 @@ def create_application():
     # 注册蓝图
     register_blueprint(app)
     # 添加数据库
-    db = SQLAlchemy(app)
-    db.init_app(app)
-    db.create_all(app=app)
+    register_db(app)
 
     return app
 
@@ -27,3 +25,9 @@ def register_blueprint(app: Flask):
     from app._response._cookie import bp_cookie
 
     app.register_blueprint(bp_cookie, url_prefix="/cookie")
+
+
+def register_db(app: Flask):
+    from app.models.note import db
+    db.init_app(app)
+    db.create_all(app=app)
